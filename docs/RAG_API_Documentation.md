@@ -61,6 +61,11 @@ Several challenges were encountered while developing this system:
 - **Issue**: Running large models on a CPU was inefficient.
 - **Resolution**: Selected a smaller, optimized model (`TinyLlama/TinyLlama-1.1B-Chat-v1.0`) that could generate responses with reasonable latency.
 
+### **7. Latency and Efficiency**
+
+- **Issue**: Query processing delays due to the initial model's computational inefficiency, creating a bottleneck in the retrieval pipeline. Redundant document retrieval further increased processing overhead.  
+- **Resolution**: Upgraded to a more computationally efficient model, reducing latency. Streamlined the pipeline by optimizing duplicate handling, eliminating redundant computations, and enhancing overall system efficiency.
+
 ---
 
 ## 4. API Endpoints
